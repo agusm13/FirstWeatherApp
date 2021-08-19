@@ -20,18 +20,31 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather">
-        <form id="search-form">
-          <input
-            type="text"
-            placeholder="Enter a city"
-            autofocus="on"
-            autocomplete="off"
-            id="search-input"
-          />
-          <input type="submit" value="Search" />
+      <div class="weatherApp mx-sm-0 mx-md-3 mx-lg-5 mx-xl-5 mx-xxl-5 my-5 px-5 py-4">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 my-3">
+              <h1> Weather App </h1>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 my-3">
+              <form id="search-engine">
+                  <div class="row">
+                      <div class="col-9">
+                          <input class="form-control"
+                                 placeholder="Enter a city"
+                                 autofocus="on"
+                                 autocomplete="off"
+                                 id="search-input"
+                          />
+                        </div>
+                        <div class="col-3">
+                            <input class="btn btn-outline-dark col-auto" type="submit" value="Search">
+                        </div>
+                    </div>
         </form>
-
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-3">
         <h2><span id="city"></span>, <span id="country"></span></h2>
         <div class="row">
           <div class="col-6">
@@ -50,9 +63,8 @@
             </div>
         </div>
 
-          <div class="col-6">
-            <div class="dayCharacteristics">
-              <ul class="current">
+        <div class="dayCharacteristics col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 my-3">
+              <ul>
                 <li> Max: <span id="max-temp"></span> °C</li>
                 <li> Min: <span id="min-temp"></span> °C</li>
                 <li> Humidity: <span id="humidity"></span> %</li>

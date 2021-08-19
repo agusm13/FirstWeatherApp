@@ -1,77 +1,135 @@
+.currentCityDisplay {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.forecast-icon {
+  margin-bottom: 10px;
+}
+
+.forecast-max-temp,
+.forecast-min-temp {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.forecast-max-temp {
+  font-weight: bold;
+}
+
+.tempDisplay {
+  font-size: 60px;
+}
+
+.tempUnit {
+  font-size: 20px;
+  position: relative;
+  top: -30px;
+}
+
+.weatherApp {
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  border: 1px solid #f1f1f1;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0px 0px #f1f1f1;
+  color: #1b262c;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+.weather-details {
+  font-size: 20px;
+}
+
+.dayCharacteristics {
+  font-size: 12px;
+  text-align: center;
+}
+
+.weather-temperature {
+  color: #000;
+}
+
+.weather-temperature .active {
+  color: #000;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  color: #000;
+  cursor: default;
+  text-decoration: none;
+}
+
+#date {
+  font-weight: normal;
+}
+
+#weather-icon {
+  position: relative;
+  left: -50px;
+}
+
+a {
+  color: #e7aae9;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #671977;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer {
+  font-size: 11px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
 h1 {
-    font-size: 20px;
-    font-family: "Poppins", sans-serif;
-    color: white;
-  }
-  
-  h2 {
-    font-size: 13px;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    color: white;
-  }
-  
-  form {
-    margin: 40px;
-    text-align: center;
-  }
-  
-  img {
-    display: block;
-    max-width: 75px;
-  }
-  .temp {
-    font-family: "Poppins", sans-serif;
-    position: relative;
-    right: -80px;
-    top: -65px;
-    color: white;
-    font-size: 40px;
-  }
-  
-  .current {
-    text-align: left;
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    display: block;
-    list-style: none;
-    font-family: "Poppins", sans-serif;
-    color: white;
-  }
-  
-  .weather {
-    border: 1px solid white;
-    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-    border-radius: 20px;
-    background-position: center;
-    padding: 15px;
-    margin: 20px;
-    max-width: 500px;
-    height: auto;
-  }
-  
-  .dayCharacteristics {
-    position: relative;
-    right: -30px;
-    bottom: 30px;
-    border-radius: 20px;
-    padding: 10px;
-    margin: 20px;
-  }
-  .nextDays {
-    position: relative;
-    right: -10px;
-    font-size: 25px;
-    font-family: "Poppins", sans-serif;
-    color: white;
-  }
-  
-  span {
-    position: relative;
-    right: -5px;
-    font-size: 20px;
-    font-family: "Poppins", sans-serif;
-    color: white;
-  }
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+h2 {
+  color: #53535f;
+  font-size: 30px;
+}
+
+h3 {
+  color: #000;
+  font-size: 20px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  top: 10px;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li::first-letter {
+  text-transform: capitalize;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
