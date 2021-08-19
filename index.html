@@ -32,66 +32,41 @@
           <input type="submit" value="Search" />
         </form>
 
-        <h1 id="city">San Francisco</h1>
-        <h2></h2>
+        <h2><span id="city"></span>, <span id="country"></span></h2>
         <div class="row">
           <div class="col-6">
-            <img
-              src="https://cdn3.iconfinder.com/data/icons/tiny-weather-1/512/sun-256.png"
-              alt="sunny-icon"
-            />
-            <span class="temp">29°C</span>
+            <ul class="currentCityDisplay"> 
+              <li id="date"></li>
+              <li id="description"></li>
+            </ul>  
           </div>
+          <div class="row">
+            <div class="clearfix weather-temperature col-6 mt-4">
+                <span class="tempDisplay" id="temperature"></span>
+                <span class="tempUnit"> 
+                    <a href="#" id="celsius-converter">ºC</a> | 
+            </div>
+            <div class="col-6"><img src="" alt="" id="weather-icon" class="float-left">
+            </div>
+        </div>
 
           <div class="col-6">
             <div class="dayCharacteristics">
               <ul class="current">
-                <li>High: 31°C</li>
-                <li>Low: 15°C</li>
-                <li>Feels like: 29°C</li>
-                <li>Wind Speed: 8 mph</li>
+                <li> Max: <span id="max-temp"></span> °C</li>
+                <li> Min: <span id="min-temp"></span> °C</li>
+                <li> Humidity: <span id="humidity"></span> %</li>
+                <li> Wind Speed: <span id="wind-speed"></span> km/h</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-3">
-            <span>Saturday</span>
-            <img
-              src="https://cdn3.iconfinder.com/data/icons/tiny-weather-1/512/cloudy-512.png"
-              alt="cloudy-sunny"
-            />
-            <span class="nextDays"> 25°C </span>
-          </div>
-          <div class="col-3">
-            <span>Sunday</span>
-            <img
-              src="https://cdn3.iconfinder.com/data/icons/tiny-weather-1/512/sun-256.png"
-              alt="sunny-icon"
-            />
-            <span class="nextDays"> 27°C </span>
-          </div>
-          <div class="col-3">
-            <span>Monday</span>
-            <img
-              src="https://cdn3.iconfinder.com/data/icons/tiny-weather-1/512/sun-256.png"
-              alt="sunny-icon"
-            />
-            <span class="nextDays"> 28°C </span>
-          </div>
-          <div class="col-3">
-            <span>Tuesday</span>
-            <img
-              src="https://cdn3.iconfinder.com/data/icons/tiny-weather-1/512/cloudy-512.png"
-              alt="cloudy-sunny"
-            />
-            <span class="nextDays"> 24°C </span>
-          </div>
+        <div class="jumbotron jumbotron-fluid weather-forecast my-4">
+                <div class="container" id="forecast">
+                </div>
+            <a href = "https://github.com/agusm13/FirstWeatherApp.git"> Repository Link </a>
         </div>
-      </div>
-    </div>
-    <a href = "https://github.com/agusm13/MyFirstApp.git"> Repository Link </a>
     <script src="src/index.js"></script>
   </body>
 </html>
