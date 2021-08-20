@@ -84,7 +84,7 @@ function getForecast(coordinates) {
   axios.get(apiUrlForecast).then(currentTemp);
 }
 
-navigator.geolocation.getCurrentPosition(getForecast);
+//navigator.geolocation.getCurrentPosition(getForecast);
 
 function forecastDis(){
   let forecastDate = new Date(timestamps * 1000);
@@ -139,10 +139,10 @@ function farTempDisplay(event){
 let celsiusTemp = null;
 let form = document.querySelector("#search-engine");
 form.addEventListener("submit", search);
-let fahrenheitLink = document.querySelector("#fahrenheit-converter");
-fahrenheitLink.addEventListener("click", farTempDisplay);
+//let fahrenheitLink = document.querySelector("#fahrenheit-converter");
+//fahrenheitLink.addEventListener("click", farTempDisplay);
 let celsiusLink = document.querySelector("#celsius-converter");
 celsiusLink.addEventListener("click", celTempDisplay);
 search("San Francisco, CA");
 
-displayCurrentForecast();
+//displayCurrentForecast();
