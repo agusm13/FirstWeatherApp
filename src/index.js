@@ -87,7 +87,7 @@ function getForecast(coordinates) {
 
 //navigator.geolocation.getCurrentPosition(getForecast);
 
-function forecastDis() {
+function forecastDis(timestamps) {
   let forecastDate = new Date(timestamps * 1000);
   let nextDay = forecastDate.getDay();
   let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
