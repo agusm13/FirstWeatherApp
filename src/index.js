@@ -56,7 +56,7 @@ function currentTemp(response) {
     let iconElement = document.querySelector("#weather-icon");
     let tempElement = document.querySelector("#temperature");
     let maxTempElement = document.querySelector("#max-temp");
-    let minTempElement = document.querySelector("#min-temo");
+    let minTempElement = document.querySelector("#min-temp");
     let windSpeedElement = document.querySelector("#wind-speed");
 
     celsiusTemp = response.data.main.temp;
