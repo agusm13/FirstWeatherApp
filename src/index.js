@@ -1,6 +1,5 @@
 
-
-function dateFunc(currentDate) {
+function dateFunc(currentDate) {0
   let date = new Date(currentDate);
   let hours = date.getHours();
   if (hours < 10) {
