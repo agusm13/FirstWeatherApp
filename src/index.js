@@ -35,13 +35,15 @@ function dateDisplay(currentDay) {
 
 function search(event) {
   event.preventDefault();
+  let cities = document.querySelector("#city");
   let searchInputElement = document.querySelector("#search-input");
   cities.innerHTML = searchInput.value;
   searchCity(searchInputElement.value);
 }
-function searchCity(cityName) {
+
+function searchCity(city) {
   let apiKey = "0fbc736f2359584075fc6a76570cf171";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(currentTemp);
 }
 
