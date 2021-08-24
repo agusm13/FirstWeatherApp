@@ -1,17 +1,17 @@
 
-function dateTime(currentTime) {
-  let time = new Time(currentTime);
-  let hours = time.getHours();
+function dateFunc(currentDate) {
+  let date = new Date(currentDate);
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${minutes}`;
   }
-  let minutes = time.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
   let days = [
-    "Sunday", 
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
@@ -19,7 +19,7 @@ function dateTime(currentTime) {
     "Friday",
     "Saturday",
   ];
-  let day = days[time.getDay()];
+  let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
 
