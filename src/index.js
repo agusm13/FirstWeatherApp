@@ -52,8 +52,8 @@ Form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
-  search(cityInputElement.value);
+  let cityInputElement = document.querySelector("#search-input");
+  searchCity(cityInputElement.value);
 }
 
 function currentTemp(response) {
@@ -155,8 +155,8 @@ function celTempDisplay(event) {
   fahrenheitLink.classList.add("active");
 }*/
 let celsiusTemp = null;
-let form = document.querySelector("#search-engine");
-form.addEventListener("submit", search);
+//let form = document.querySelector("#search-engine");
+//form.addEventListener("submit", search);
 // let fahrenheitLink = document.querySelector("#fahrenheit-converter");
 // fahrenheitLink.addEventListener("click", farTempDisplay);
 let celsiusLink = document.querySelector("#celsius-converter");
