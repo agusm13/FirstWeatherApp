@@ -47,14 +47,14 @@ function searchCity(city) {
   axios.get(apiUrl).then(currentTemp);
 }
 
-let Form = document.querySelector("#search-engine");
-Form.addEventListener("submit", search);
-
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+
+let Form = document.querySelector("#search-engine");
+Form.addEventListener("submit", handleSubmit);
 
 function currentTemp(response) {
   let cityElement = document.querySelector("#city");
