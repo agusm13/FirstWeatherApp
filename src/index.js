@@ -23,8 +23,8 @@ function dateFunc(currentDate) {0
   return `${day} ${hours}:${minutes}`;
 }
 
-function dateDisplay(currentDay) {
-  let forecastDate = new Date(currentDay * 1000);
+function dateDisplay(currentDate) {
+  let forecastDate = new Date(currentDate * 1000);
   let nextDay = forecastDate.getDay();
   let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -89,8 +89,8 @@ function getForecast(coordinates) {
 
 //navigator.geolocation.getCurrentPosition(getForecast);
 
-function forecastDis(timestamps) {
-  let forecastDate = new Date(timestamps * 1000);
+function forecastDis(currentDay) {
+  let forecastDate = new Date(currentDay * 1000);
   let nextDay = forecastDate.getDay();
   let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
