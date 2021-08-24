@@ -47,7 +47,7 @@ function searchCity(city) {
   axios.get(apiUrl).then(currentTemp);
 }
 
-let Form = document.querySelector("#search-engine");
+let Form = document.querySelector("#search-form");
 Form.addEventListener("submit", search);
 
 function currentTemp(response) {
@@ -89,7 +89,7 @@ function getForecast(position) {
   axios.get(apiUrlForecast).then(displayCurrentForecast);
 }
 
-navigator.geolocation.getCurrentPosition(getForecast);
+//navigator.geolocation.getCurrentPosition(getForecast);
 
 function forecastDis(timestamps) {
   let forecastDate = new Date(timestamps * 1000);
