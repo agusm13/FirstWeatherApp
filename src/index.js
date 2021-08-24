@@ -23,8 +23,8 @@ function dateFunc(currentDate) {0
   return `${day} ${hours}:${minutes}`;
 }
 
-function dateDisplay(currentDate) {
-  let forecastDate = new Date(currentDate * 1000);
+function dateDisplay(currentDay) {
+  let forecastDate = new Date(currentDay * 1000);
   let nextDay = forecastDate.getDay();
   let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -49,6 +49,12 @@ function searchCity(city) {
 
 let Form = document.querySelector("#search-engine");
 Form.addEventListener("submit", search);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
 
 function currentTemp(response) {
   let cityElement = document.querySelector("#city");
@@ -97,8 +103,8 @@ function forecastDis(currentDay) {
   return weekdays[nextDay];
 }
 
-function displayCurrentForecast(response) {
-  let forecastInfo = response.data.daily;
+function displayCurrentForecast(forc) {
+  let forecastInfo = forc.data.daily;
 
   let forecastElement = document.querySelector("#forecast");
 
