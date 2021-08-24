@@ -33,13 +33,13 @@ function dateDisplay(currentDay) {
 //let h2 = document.querySelector("h2");
 //h2.innerHTML = `${day} ${hours}:${minutes}`;
 
-/*function search(event) {
+function search(event) {
   event.preventDefault();
   let cities = document.querySelector("#city");
   let searchInputElement = document.querySelector("#search-input");
   cities.innerHTML = searchInput.value;
   searchCity(searchInputElement.value);
-}*/
+}
 
 function searchCity(city) {
   let apiKey = "0fbc736f2359584075fc6a76570cf171";
