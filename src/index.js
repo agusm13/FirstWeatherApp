@@ -33,13 +33,13 @@ function dateDisplay(currentDay) {
 //let h2 = document.querySelector("h2");
 //h2.innerHTML = `${day} ${hours}:${minutes}`;
 
-function search(event) {
+/*function search(event) {
   event.preventDefault();
   let cities = document.querySelector("#city");
   let searchInputElement = document.querySelector("#search-input");
   cities.innerHTML = searchInput.value;
   searchCity(searchInputElement.value);
-}
+}*/
 
 function searchCity(city) {
   let apiKey = "0fbc736f2359584075fc6a76570cf171";
@@ -72,7 +72,7 @@ function currentTemp(response) {
 
   cityElement.innerHTML = response.data.name;
   countryElement.innerHTML = response.data.sys.country;
-  dateElement.innerHTML = dateDisplay(response.data.dt * 1000);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   iconElement.setAttribute(
@@ -89,15 +89,15 @@ function currentTemp(response) {
 }
 function getForecast(coordinates) {
   let apiKey = "0fbc736f2359584075fc6a76570cf171";
-  let apiUrlForecast = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrlForecast).then(displayCurrentForecast);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayCurrentForecast);
 }
 
 //navigator.geolocation.getCurrentPosition(getForecast);
 
-function forecastDis(currentDay) {
-  let forecastDate = new Date(currentDay * 1000);
-  let nextDay = forecastDate.getDay();
+function dateFormat(currentDay) {
+  let formatDate = new formatDate(currentDay * 1000);
+  let nextDay = formatDate.getNextDay();
   let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return weekdays[nextDay];
