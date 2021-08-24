@@ -114,7 +114,7 @@ function displayCurrentForecast(forc) {
     if (index > 0 && index < 7) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-2"><h3>${forecastDis(currentForecast.dt)}
+        `<div class="col-2"><h3>${dateDisplay(currentForecast.dt)}
       </h3>
       <ul>
         <li>
@@ -143,22 +143,22 @@ function celTempDisplay(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
   celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
+  //fahrenheitLink.classList.remove("active");
 }
 
-function farTempDisplay(event) {
+/*function farTempDisplay(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   let farTemp = (celsiusTemp * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(farTemp);
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-}
+}*/
 let celsiusTemp = null;
-let form = document.querySelector("#search-engine");
-Form.addEventListener("submit", search);
-let fahrenheitLink = document.querySelector("#fahrenheit-converter");
-fahrenheitLink.addEventListener("click", farTempDisplay);
+//let form = document.querySelector("#search-engine");
+//form.addEventListener("submit", search);
+// let fahrenheitLink = document.querySelector("#fahrenheit-converter");
+// fahrenheitLink.addEventListener("click", farTempDisplay);
 let celsiusLink = document.querySelector("#celsius-converter");
 celsiusLink.addEventListener("click", celTempDisplay);
 searchCity("San Francisco");
