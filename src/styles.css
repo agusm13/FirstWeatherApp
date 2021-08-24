@@ -31,8 +31,7 @@
 }
 
 .weatherApp {
-  background: rgb(131,58,180);
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(233,203,229,1) 50%);
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
   border: 1px solid #f1f1f1;
   border-radius: 20px;
   box-shadow: 5px 5px 0px 0px #f1f1f1;
@@ -42,11 +41,11 @@
 }
 
 .weather-details {
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .dayCharacteristics {
-  font-size: 12px;
+  font-size: 15px;
   text-align: center;
 }
 
