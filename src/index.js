@@ -81,13 +81,15 @@ function currentTemp(response) {
 
   getForecast(response.data.coord);
 }
-function getForecast(coordinates) {
+function getForecast(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
   let apiKey = "0fbc736f2359584075fc6a76570cf171";
-  let apiUrlForecast = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrlForecast = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrlForecast).then(displayCurrentForecast);
 }
 
-//navigator.geolocation.getCurrentPosition(getForecast);
+navigator.geolocation.getCurrentPosition(getForecast);
 
 function forecastDis(timestamps) {
   let forecastDate = new Date(timestamps * 1000);
@@ -137,17 +139,17 @@ function celTempDisplay(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
   celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
+  //fahrenheitLink.classList.remove("active");
 }
 
-function farTempDisplay(event) {
+/*function farTempDisplay(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   let farTemp = (celsiusTemp * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(farTemp);
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-}
+}*/
 let celsiusTemp = null;
 let form = document.querySelector("#search-engine");
 form.addEventListener("submit", search);
