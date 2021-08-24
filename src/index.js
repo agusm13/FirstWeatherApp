@@ -157,8 +157,8 @@ function farTempDisplay(event) {
 let celsiusTemp = null;
 //let form = document.querySelector("#search-engine");
 //form.addEventListener("submit", search);
-// let fahrenheitLink = document.querySelector("#fahrenheit-converter");
-// fahrenheitLink.addEventListener("click", farTempDisplay);
+let fahrenheitLink = document.querySelector("#fahrenheit-converter");
+fahrenheitLink.addEventListener("click", farTempDisplay);
 let celsiusLink = document.querySelector("#celsius-converter");
 celsiusLink.addEventListener("click", celTempDisplay);
 searchCity("San Francisco");
