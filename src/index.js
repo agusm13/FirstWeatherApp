@@ -124,9 +124,11 @@ function displayCurrentForecast(forc) {
           currentForecast.weather[0].description
         }" width="40"></li>
           <li class="forecast-max-temp">${Math.round(
-            currentForecast.max.temp)} ºC</li>
+            currentForecast.temp.max
+          )} ºC</li>
               <li class="forecast-min-temp">${Math.round(
-                currentForecast.min.temp)} ºC</li>
+                currentForecast.temp.min
+              )} ºC</li>
       </ul>
      </div>`;
     }
@@ -154,7 +156,7 @@ function farTempDisplay(event) {
 }
 let celsiusTemp = null;
 let form = document.querySelector("#search-engine");
-form.addEventListener("submit", search);
+Form.addEventListener("submit", search);
 let fahrenheitLink = document.querySelector("#fahrenheit-converter");
 fahrenheitLink.addEventListener("click", farTempDisplay);
 let celsiusLink = document.querySelector("#celsius-converter");
