@@ -1,17 +1,17 @@
 
-function dateFunc(currentDate) {0
-  let date = new Date(currentDate);
-  let hours = date.getHours();
+function dateTime(currentTime) {
+  let time = new Time(currentTime);
+  let hours = time.getHours();
   if (hours < 10) {
     hours = `0${minutes}`;
   }
-  let minutes = date.getMinutes();
+  let minutes = time.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
   let days = [
-    "Sunday",
+    "Sunday", 
     "Monday",
     "Tuesday",
     "Wednesday",
@@ -19,7 +19,7 @@ function dateFunc(currentDate) {0
     "Friday",
     "Saturday",
   ];
-  let day = days[date.getDay()];
+  let day = days[time.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
 
@@ -114,7 +114,7 @@ function displayCurrentForecast(forc) {
     if (index > 0 && index < 7) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-2"><h3>${dateDisplay(currentForecast.dt)}
+        `<div class="col-2"><h3>${forecastDis(currentForecast.dt)}
       </h3>
       <ul>
         <li>
@@ -143,17 +143,17 @@ function celTempDisplay(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
   celsiusLink.classList.add("active");
-  //fahrenheitLink.classList.remove("active");
+  fahrenheitLink.classList.remove("active");
 }
 
-/*function farTempDisplay(event) {
+function farTempDisplay(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   let farTemp = (celsiusTemp * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(farTemp);
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-}*/
+}
 let celsiusTemp = null;
 //let form = document.querySelector("#search-engine");
 //form.addEventListener("submit", search);
